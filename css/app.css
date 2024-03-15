@@ -124,7 +124,8 @@
     -moz-osx-font-smoothing: grayscale;
 }
 .slick-prev {
-    left: -25px;
+    left: -5px;
+    z-index: 5;
 }
 [dir=rtl] .slick-prev {
     left: auto;
@@ -136,6 +137,7 @@
     content: "→"}
 .slick-next {
     right: -25px;
+    z-index: 5;
 }
 [dir=rtl] .slick-next {
     left: -25px;
@@ -1603,7 +1605,7 @@ to {
     padding-right: 60px;
 }
 .left-block {
-    width: 30%
+    width: 26.5%;
 }
 #right-block {
     display: block;
@@ -1611,7 +1613,7 @@ to {
     right: 0;
     top: 0;
     bottom: 0;
-    width: 70%;
+    width: 73.5%;
     height: 100vh;
     z-index: 1;
 }
@@ -1622,9 +1624,9 @@ to {
     float: right;
 }
 .wide-content .column-left {
-    width: 30%}
+    width: 26.5%}
 .wide-content .column-right {
-    width: 70%}
+    width: 73.5%}
 .large-up-fullheight {
     padding-bottom: 0;
 }
@@ -1671,7 +1673,7 @@ to {
     position: fixed;
     top: 0;
     right: 0;
-    width: 70%;
+    width: 73.5%;
     height: 100%;
     background: #faebd7;
     z-index: 5;
@@ -1747,8 +1749,6 @@ to {
     font-weight: 100 !important;
     font-size: 14px;
   }
-  
-
   
   
 

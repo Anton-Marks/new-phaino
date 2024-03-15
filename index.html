@@ -117,8 +117,8 @@
                 <div id="kitchen-11" class="content">
                   <!-- Here Circle -->
                   <div class="container-main-slide" >
-                    <figure style="margin: 0;">
-                      <img src="/img/dynamic-gallery/a/circle/block-a/center/left-center.webp" alt="Image description" data-modal-gallery>
+                    <figure style="margin: 0;" class="icon-ctr-pointer">
+                      <img src="/img/dynamic-gallery/a/circle/block-a/center/left-center.jpg" alt="Image description" data-modal-gallery>
                     </figure>
                   </div>
                   <div class="container">
@@ -456,9 +456,13 @@
 
         <div class="content">
           <div class="container-main-slide" >
-            <figure style="margin: 0;">
-              <img src="/img/dynamic-gallery/a/circle/block-a/center/left-center.webp" alt="Image description">
-            </figure>
+
+            <div class="image-carousel">
+              <div><img src="img/carrousel/slider-3.jpg" alt="Image Slider One"></div>
+              <div><img src="img/carrousel/slider-2.jpg" alt="Image Slider One"></div>
+              <div><img src="img/carrousel/slider-1.jpg" alt="Image Slider One"></div>
+            </div>
+
           </div>
 
           <div class="container" style="background-color: #e6e7e8;">
@@ -514,7 +518,17 @@
 
   <section class="modal hidden" id="modal-gallery-options">
     <div class="container-modal-close">
-      <svg width="30px" height="30px" viewBox="0 0 64 64" style="cursor: pointer;" id="close-gallery-options-button" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff"><line x1="16" y1="16" x2="48" y2="48"/><line x1="48" y1="16" x2="16" y2="48"/></svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 35 35" id="close-gallery-options-button" class="icon-ctr-pointer">
+        <linearGradient id="b" gradientUnits="userSpaceOnUse" y1="17.571" x2="35.014" y2="17.571">
+          <stop offset="0" stop-color="#805B0B"></stop>
+          <stop offset=".746" stop-color="#DEB822"></stop>
+          <stop offset="1" stop-color="#FFD92A"></stop>
+        </linearGradient>
+        <path fill="url(#b)" class="back" d="M33.6 35l1.4-1.4-16.1-16L35 1.6 33.6.1 17.5 16.2 1.4.1 0 1.6l16.1 16L0 33.6 1.4 35l16.1-16"></path>
+        <path fill="#FFFFFF" class="front" d="M33.6 35l1.4-1.4-16.1-16L35 1.6 33.6.1 17.5 16.2 1.4.1 0 1.6l16.1 16L0 33.6 1.4 35l16.1-16"></path>
+      </svg>
+
     </div>
     <div class="container-options-gallery">
 
@@ -646,5 +660,6 @@
   <script src="js/contact.js"></script>
   <script src="js/modal-options.js"></script>
   <script src="js/controls.js"></script>
+  <script src="js/splide/main.js"></script>
 </body>
 </html>
