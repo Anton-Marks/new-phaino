@@ -296,7 +296,8 @@ const clickedSquare = () => {
 };
 
 const generatePath = (letter, shade, block, side, file) => {
-  const path = `${basePath}${letter}/${shade}/${block}/${side}/${file}`;
+  //const path = `${basePath}${letter}/${shade}/${block}/${side}/${file}`;
+  const path = `${basePath}${letter}/${shade}/${block}/${file}`;
   const reference = "#collection-body-collection";
 
   document.querySelector(reference).style.backgroundImage = `url(${path})`;
@@ -344,23 +345,3 @@ if (wallOptions.length > 0) {
   });
 }
 
-
-const optionsAvailable = {
-  a: {
-    circle: {
-      base: { left: true, center: true, right: true },
-      left: {},
-      center: {},
-      right: {},
-    },
-    close: {
-      base: { left: true, center: true, right: true },
-    },
-    triangle: {
-      base: { left: true, center: true, right: true },
-    },
-    square: {
-      base: { left: true, center: true, right: true },
-    },
-  },
-};

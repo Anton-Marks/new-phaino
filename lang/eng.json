@@ -1,0 +1,18 @@
+{
+    "locale": {
+        "locale": "es-US"
+    },
+    "menu": {
+        "menu-main-about": "About",
+        "menu-main-collection": "Collection",
+        "menu-main-elements": "Elements",
+        "menu-main-material": "Materials",
+        "menu-main-accesories": "Accesories",
+        "menu-main-download": "Download"
+    },
+    "sections": {
+        "section-title-collections": "Collections",
+        "section-title-wall": "Wall",
+        "section-title-organizers": "Organizers"
+    }
+}
