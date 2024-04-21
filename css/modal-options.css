@@ -32,18 +32,14 @@
 
 .container-options-gallery{
   display: flex;
-  flex: 1;
   align-items: center;
 }
 
 #collection-body-collection {
   width: 100%;
   height: 75vh;
-  background-size: cover;
   padding: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: fixed;
+  position: relative;
 }
 
 .main-container-controls{
@@ -51,11 +47,14 @@
   width: 100%;
   height: 100%;
   flex-direction: column;
+  top: 30px;
+  position: absolute;
+
 }
 
 .container-main-right-controls{
   display: flex;
-  height: 92%;
+  height: 96.5%;
   justify-content: flex-end;
 }
 
@@ -176,7 +175,7 @@
 }
 
 .container-right-right{
-  width: 5%;
+  width: 3.5%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -191,4 +190,76 @@
 
 .icon-ctr-pointer {
   cursor: pointer;
+}
+
+
+.m-controls-center {
+  display: none !important;
+}
+
+.w-controls-center {
+  display: flex;
+}
+
+
+@media (max-width: 768px) {
+
+  .container-options-gallery{
+    flex-direction: column;
+  }
+
+  #collection-body-collection{
+    height: auto;
+  }
+
+  .main-container-controls{
+    top: -0px !important;
+    height: 100%;
+  }
+  
+  .ctrl-square-c, .ctrl-triangle-c, .ctrl-close-c, .ctrl-circle-c{
+    height: 18px;
+    width: 18px;
+  }
+
+  .container-main-right-controls {
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+  }
+
+  .container-right-right {
+    width: 7%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .container-right-center-pos{
+    height: 100%;
+    justify-content: space-around;
+  }
+
+  .w-controls-center {
+    display: none !important;
+  }
+
+  .m-controls-center{
+    display: flex !important;
+    background-color: #c3bfbf;
+    width: 100%;
+    height: auto;
+  }
+
+  .container-center-bottom-controls{
+    width: 95% !important;
+    padding: 2px !important;
+  }
+
+  .phaino-control-rectangle {
+    margin-top: 3px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
 }

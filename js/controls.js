@@ -298,9 +298,9 @@ const clickedSquare = () => {
 const generatePath = (letter, shade, block, side, file) => {
   //const path = `${basePath}${letter}/${shade}/${block}/${side}/${file}`;
   const path = `${basePath}${letter}/${shade}/${block}/${file}`;
-  const reference = "#collection-body-collection";
+  const reference = "#dynamic-img-phaino";
 
-  document.querySelector(reference).style.backgroundImage = `url(${path})`;
+  document.querySelector(reference).src = `${path}`;
 };
 
 // special functions to change wall images
