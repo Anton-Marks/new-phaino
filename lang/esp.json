@@ -14,5 +14,10 @@
         "section-title-collections": "Colecciones",
         "section-title-wall": "Muro",
         "section-title-organizers": "Organizadores"
+    },
+    "figures": {
+        "figure-collection-circle": "Circulo",
+        "figure-collection-triangle": "Triangulo",
+        "figure-collection-square": "Cuadrado"
     }
 }

@@ -1849,6 +1849,16 @@ to {
   transition: 0s;
   transform: translate(0, 5%);
 }
+
+.i18n-language-phaino{
+    cursor: pointer;
+}
+
+.i18n-language-current{
+    font-weight: bolder;
+}
+
+
   
   
 

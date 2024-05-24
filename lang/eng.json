@@ -14,5 +14,10 @@
         "section-title-collections": "Collections",
         "section-title-wall": "Wall",
         "section-title-organizers": "Organizers"
+    },
+    "figures": {
+        "figure-collection-circle": "Circle",
+        "figure-collection-triangle": "Tringle",
+        "figure-collection-square": "Square"
     }
 }
