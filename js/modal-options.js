@@ -6,6 +6,7 @@ const closeModalBtn = document.querySelector("#close-gallery-options-button");
 const closeModal = function () {
   modal.classList.remove("show-modal");
   modal.classList.add("hidden");
+  document.body.style.position = ''
 };
 
 // close the modal when the close button and overlay is clicked
@@ -23,6 +24,7 @@ document.addEventListener("keydown", function (e) {
 const openModal = function () {
   modal.classList.remove("hidden");
   modal.classList.add("show-modal");
+  document.body.style.position = 'Fixed'
   //overlay.classList.remove("hidden");
 };
 

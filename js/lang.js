@@ -15,6 +15,7 @@ const setTranslateSections = (options) => {
     });
 }
 
+
 const setTranslateFigures = (options) => {
     Object.entries(options).forEach(([key, val]) => {
         document.querySelector(`#${baseWorld}${key}`).textContent = val
