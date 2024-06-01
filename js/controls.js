@@ -124,7 +124,7 @@ const changeInsideBlock = (newLetter) => {
 
 // special function to combine name with both options
 const combineNameWithBothOptions = (newOption) => {
-  return `${getActiveOnlyLetter()}${newOption}.jpg`;
+  return `${getActiveOnlyLetter()}${newOption}.png`;
 };
 
 // special function to clean second name in file name
