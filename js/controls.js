@@ -87,7 +87,7 @@ const addClsActiveSide = (reference) => {
     document.querySelector(`#${reference}`).classList.add("on-side");
     document.querySelector(`#${reference}`).classList.add("on-center");
   } else {
-    document.querySelector(`#${reference}`).setAttribute("fill", "#707070");
+    document.querySelector(`#${reference}`).setAttribute("fill", "#707070"); //707070
     //document.querySelector(`#${reference}`).classList.add("on-side");
   }
 };
@@ -224,7 +224,7 @@ const changeOptionByShade = (shade) => {
 };
 
 const clickedCircle = () => {
-  changeFillSvg(circle, "#707070");
+  changeFillSvg(circle, "#0a0a0a");
   changeFillSvg(close, "#FFFFFF");
   changeFillSvg(triangle, "#FFFFFF");
   changeFillSvg(square, "#FFFFFF");
@@ -242,7 +242,7 @@ const clickedCircle = () => {
 };
 
 const clickedClose = () => {
-  changeFillSvg(close, "#707070");
+  changeFillSvg(close, "#0a0a0a");
   changeFillSvg(circle, "#FFFFFF");
   changeFillSvg(triangle, "#FFFFFF");
   changeFillSvg(square, "#FFFFFF");
@@ -260,7 +260,7 @@ const clickedClose = () => {
 };
 
 const clickedTriangle = () => {
-  changeFillSvg(triangle, "#707070");
+  changeFillSvg(triangle, "#0a0a0a");
   changeFillSvg(close, "#FFFFFF");
   changeFillSvg(circle, "#FFFFFF");
   changeFillSvg(square, "#FFFFFF");
@@ -278,7 +278,7 @@ const clickedTriangle = () => {
 };
 
 const clickedSquare = () => {
-  changeFillSvg(square, "#707070");
+  changeFillSvg(square, "#0a0a0a");
   changeFillSvg(close, "#FFFFFF");
   changeFillSvg(triangle, "#FFFFFF");
   changeFillSvg(circle, "#FFFFFF");

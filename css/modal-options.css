@@ -33,17 +33,21 @@
 .container-options-gallery{
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #collection-body-collection {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 95%;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .main-container-controls{
   display: flex;
-  width: 99vw;
+  width: 90vw;
   height: 85vh;
   flex-direction: column;
   top: 30px;
@@ -83,6 +87,9 @@
 
 .container-first-controls, .container-second-controls{
   width: 35%;
+}
+
+.container-first-controls, .container-middle-controls, .container-second-controls{
   align-items: center;
 }
 
@@ -92,9 +99,7 @@
 
 .container-middle-controls{
   width: 40%;
-  display: flex;
   justify-content: center;
-  align-items: flex-start;
 }
 
 
@@ -158,8 +163,6 @@
 .phaino-control-rectangle {
   width: 65px;
   height: 20px;
-  margin-top: 5px;
-  opacity: 1;
 
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
