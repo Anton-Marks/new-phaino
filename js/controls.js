@@ -93,12 +93,12 @@ const addClsActiveSide = (reference) => {
 };
 
 // constants for structure name and path for get name file considering all options posibles
-let letterOption = "a";
+let letterOption = "A";
 let shadeOption = "circle";
-let insideBlock = `block-${letterOption}`;
+let insideBlock = 'A';
 let sideOption = "left";
 let nameFile = getActiveLetter();
-let nameFileSecond = "";
+let nameCurrentImage = 'left.jpg';
 
 // constants with name to ID for geometics controls right
 const square = "#ctrl-square-c,fill";
@@ -119,12 +119,14 @@ const changeFillSvg = (elArr, fill) => {
 
 // special function to chnage name inside block option
 const changeInsideBlock = (newLetter) => {
-  return `block-${newLetter}`;
+  return `${newLetter}`.toUpperCase();
 };
 
 // special function to combine name with both options
 const combineNameWithBothOptions = (newOption) => {
-  return `${getActiveOnlyLetter()}${newOption}.png`;
+  //return `${getActiveOnlyLetter()}${newOption}.jpg`;
+  nameCurrentImage = `${newOption}.jpg`;
+  return `${newOption}.jpg`;
 };
 
 // special function to clean second name in file name
@@ -146,14 +148,14 @@ if (optionLetterOne.length > 0) {
       letterOption = e.target.getAttribute("data-ctrl-ltr");
       insideBlock = changeInsideBlock("a");
 
-      let name = "";
+      /*let name = "";
       if (nameFileSecond.length > 0) {
         name = combineNameWithBothOptions(nameFileSecond);
       } else {
         name = cleanFileName();
-      }
+      }*/
 
-      generatePath(letterOption, shadeOption, insideBlock, sideOption, name);
+      generatePath(letterOption, shadeOption, insideBlock, nameCurrentImage);
     });
   });
 }
@@ -163,7 +165,6 @@ const optionsSide = document.querySelectorAll(".sq-opt-sd-p");
 if (optionsSide.length > 0) {
   optionsSide.forEach((el) => {
     el.addEventListener("click", (e) => {
-      nameFileSecond = e.target.getAttribute("data-ctrl-side");
       sideOption = e.target.getAttribute("data-side");
 
       const dataId = e.target.hasAttribute("data-id")
@@ -173,12 +174,12 @@ if (optionsSide.length > 0) {
       removeClsSides();
       addClsActiveSide(dataId);
 
+      //here
       generatePath(
         letterOption,
         shadeOption,
         insideBlock,
-        sideOption,
-        combineNameWithBothOptions(nameFileSecond)
+        combineNameWithBothOptions(sideOption)
       );
     });
   });
@@ -199,14 +200,7 @@ if (optionLetterSecond.length > 0) {
 
       insideBlock = changeInsideBlock(arrData[1]);
 
-      let name = "";
-      if (nameFileSecond.length > 0) {
-        name = combineNameWithBothOptions(nameFileSecond);
-      } else {
-        name = cleanFileName();
-      }
-
-      generatePath(letterOption, shadeOption, insideBlock, sideOption, name);
+      generatePath(letterOption, shadeOption, insideBlock, nameCurrentImage);
     });
   });
 }
@@ -231,14 +225,7 @@ const clickedCircle = () => {
 
   shadeOption = "circle";
 
-  let name = "";
-  if (nameFileSecond.length > 0) {
-    name = combineNameWithBothOptions(nameFileSecond);
-  } else {
-    name = cleanFileName();
-  }
-
-  generatePath(letterOption, shadeOption, insideBlock, sideOption, name);
+  generatePath(letterOption, shadeOption, insideBlock, name);
 };
 
 const clickedClose = () => {
@@ -249,14 +236,7 @@ const clickedClose = () => {
 
   shadeOption = "close";
 
-  let name = "";
-  if (nameFileSecond.length > 0) {
-    name = combineNameWithBothOptions(nameFileSecond);
-  } else {
-    name = cleanFileName();
-  }
-
-  generatePath(letterOption, shadeOption, insideBlock, sideOption, name);
+  generatePath(letterOption, shadeOption, insideBlock, name);
 };
 
 const clickedTriangle = () => {
@@ -267,14 +247,7 @@ const clickedTriangle = () => {
 
   shadeOption = "triangle";
 
-  let name = "";
-  if (nameFileSecond.length > 0) {
-    name = combineNameWithBothOptions(nameFileSecond);
-  } else {
-    name = cleanFileName();
-  }
-
-  generatePath(letterOption, shadeOption, insideBlock, sideOption, name);
+  generatePath(letterOption, shadeOption, insideBlock, name);
 };
 
 const clickedSquare = () => {
@@ -285,63 +258,16 @@ const clickedSquare = () => {
 
   shadeOption = "square";
 
-  let name = "";
-  if (nameFileSecond.length > 0) {
-    name = combineNameWithBothOptions(nameFileSecond);
-  } else {
-    name = cleanFileName();
-  }
-
-  generatePath(letterOption, shadeOption, insideBlock, sideOption, name);
+  generatePath(letterOption, shadeOption, insideBlock, name);
 };
 
-const generatePath = (letter, shade, block, side, file) => {
+const generatePath = (letter, shade, block, file) => {
   //const path = `${basePath}${letter}/${shade}/${block}/${side}/${file}`;
-  const path = `${basePath}${letter}/${shade}/${block}/${file}`;
+  //const path = `${basePath}${letter}/${shade}/${block}/${file}`;
+  const path = `${basePath}${shade}/${letter}${block}/${file}`;
+  console.log({path});
   const reference = "#dynamic-img-phaino";
 
   document.querySelector(reference).src = `${path}`;
 };
-
-// special functions to change wall images
-
-const removeCurrentWallSelected = () => {
-  const currentSelected = document.querySelector(".on-lter-lft.p-w-c");
-  if (currentSelected) {
-    currentSelected.classList.remove("on-lter-lft");
-    currentSelected.classList.add("off-lter-lft");
-  }
-};
-
-const addCurrentWallSelected = (reference) => {
-  const currentSelected = document.querySelector(`#${reference}`);
-  if (currentSelected) {
-    currentSelected.classList.remove("off-lter-lft");
-    currentSelected.classList.add("on-lter-lft");
-  }
-};
-
-const changeBackgroundWallSelected = (reference) => {
-  const numb = reference.split("-")[2];
-
-  assignNumberSelected(numb);
-
-  const img = `Img_${numb}.webp`;
-  const sel = "#wall-section";
-  const path = `${basePath}wall_b/${img}`;
-
-  document.querySelector(sel).style.backgroundImage = `url(${path})`;
-};
-
-const wallOptions = document.querySelectorAll(".p-w-c");
-
-if (wallOptions.length > 0) {
-  wallOptions.forEach((wall) => {
-    wall.addEventListener("click", (e) => {
-      removeCurrentWallSelected();
-      addCurrentWallSelected(e.target.id);
-      changeBackgroundWallSelected(e.target.id);
-    });
-  });
-}
 

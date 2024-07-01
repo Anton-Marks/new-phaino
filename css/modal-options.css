@@ -28,6 +28,8 @@
   padding: 15px 40px 15px 10px;
   display: flex;
   justify-content: flex-end;
+  position: absolute;
+  right: -15px;
 }
 
 .container-options-gallery{
@@ -37,8 +39,8 @@
 }
 
 #collection-body-collection {
-  width: 90%;
-  height: 95%;
+  width: 91%;
+  height: 96%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -48,7 +50,7 @@
 .main-container-controls{
   display: flex;
   width: 90vw;
-  height: 85vh;
+  height: 90vh;
   flex-direction: column;
   top: 30px;
   position: absolute;
@@ -62,9 +64,8 @@
 }
 
 .container-main-bottom-controls{
-  display: flex;
   justify-content: center;
-  height: 8%;
+  height: 5%;
 }
 
 .container-center-bottom-controls{
@@ -85,8 +86,13 @@
 }
 
 
-.container-first-controls, .container-second-controls{
-  width: 35%;
+.container-first-controls{
+  width: 32%;
+}
+
+.container-second-controls{
+  width: 38%;
+  margin-left: 15px;
 }
 
 .container-first-controls, .container-middle-controls, .container-second-controls{
@@ -100,6 +106,7 @@
 .container-middle-controls{
   width: 40%;
   justify-content: center;
+  align-items: flex-start;
 }
 
 
@@ -204,8 +211,8 @@
 }
 
 .size-close-btn-modal{
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
 }
 
 @media (max-width: 768px) {

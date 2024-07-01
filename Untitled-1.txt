@@ -141,3 +141,8 @@ padding-right: 60px;
             <figure style="margin: 0;">
               <img src="/img/dynamic-gallery/a/circle/block-a/center/left-center.webp" alt="Image description">
             </figure>
+
+
+
+
+            martes 13 de diciembre 2022  al  Viernes 14 de julio 2023 
