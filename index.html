@@ -710,7 +710,7 @@
  
   <div id="preload">
     <div class="container-loader-loader" id="progress">
-      <img src="./img/loader/Phaino_Isotipo.png" alt="Icon plus" height="80px" style="max-width: 150%;" >
+      <img src="./img/loader/Phaino_Isotipo.png" alt="Icon plus" height="80px" style="max-width: 150%;" id="loader-gif-phaino">
     </div>
     <div id="progressbar" style="width: 100%; display: none;"></div>
   </div>
@@ -723,6 +723,17 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-46508708-13');
+  </script>
+  <script>
+    window.addEventListener("load", () => {
+    // Preloader
+    document.querySelector("#preload").classList.add("fade-out-preloader");
+    document.querySelector('#loader-gif-phaino').style.animationPlayState = 'paused';
+    setTimeout(() => {
+        //document.querySelector("#preload").style.display = "none";
+        console.log('kajsdkjakjsdhnklajsdkljaolsdjlkajsldkjlaksjdlaksjdlkajslkdj');
+    }, 400)
+    })
   </script>
   <script src="js/app.min.js"></script>
   <script src="js/contact.js"></script>

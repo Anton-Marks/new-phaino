@@ -1858,6 +1858,35 @@ to {
     font-weight: bolder;
 }
 
+.fade-out-preloader {
+    -webkit-animation: slide-out-bck-center 0.5s ease-in both;
+	        animation: slide-out-bck-center 0.5s ease-in both;
+}
+
+@-webkit-keyframes slide-out-bck-center {
+    0% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateZ(-1100px);
+              transform: translateZ(-1100px);
+      opacity: 0;
+    }
+  }
+  @keyframes slide-out-bck-center {
+    0% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateZ(-1100px);
+              transform: translateZ(-1100px);
+      opacity: 0;
+    }
+  }
 
   
   

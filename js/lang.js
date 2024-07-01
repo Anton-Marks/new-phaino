@@ -15,14 +15,12 @@ const setTranslateSections = (options) => {
     });
 }
 
-
 const setTranslateFigures = (options) => {
     Object.entries(options).forEach(([key, val]) => {
         document.querySelector(`#${baseWorld}${key}`).textContent = val
         document.querySelector(`#${baseWorldTtlFig}${key}`).textContent = val
     });
 }
-
 
 const translatePage = ( data ) => {
 
